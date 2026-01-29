@@ -1,5 +1,128 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* EduTech Design System - Yellow accent, peachy-pink secondary */
+
+@layer base {
+  :root {
+    --background: 51 100% 96%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Vibrant yellow primary */
+    --primary: 45 100% 55%;
+    --primary-foreground: 0 0% 10%;
+
+    /* Peachy pink secondary */
+    --secondary: 20 60% 90%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 45 20% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 100% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 45 100% 55%;
+
+    --radius: 1.5rem;
+
+    /* Custom tokens */
+    --yellow-bright: 45 100% 55%;
+    --peach: 20 60% 90%;
+    --peach-border: 20 40% 80%;
+
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 45 100% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 100% 55%;
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 20 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 45 100% 55%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 100% 55%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 100% 55%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .heading-display {
+    font-family: var(--font-display);
+    @apply font-medium tracking-tight;
+  }
+
+  .heading-display-italic {
+    font-family: var(--font-display);
+    @apply font-medium italic tracking-tight;
+  }
+}
 
 @custom-variant dark (&:is(.dark *));
 
